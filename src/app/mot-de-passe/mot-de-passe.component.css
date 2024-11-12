@@ -1,0 +1,61 @@
+.styled-input {
+    width: 100%;
+    padding: 1em; /* Utilisation de 'em' pour le padding */
+    margin: 1em 0; /* Utilisation de 'em' pour les marges */
+    box-sizing: border-box;
+    border: 0.125em solid rgb(101, 154, 224); /* Utilisation de 'em' pour la bordure */
+    border-radius: 0.3125em; /* Utilisation de 'em' pour le border-radius */
+    background-color: #f1f1f1;
+    font-size: 1em; /* Taille de police en 'em' */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.styled-input:focus {
+    border-color: rgb(52, 105, 204);
+    box-shadow: 0 0 0.625em rgba(52, 105, 204, 0.5); /* Utilisation de 'em' pour le box-shadow */
+    outline: none;
+}
+
+.containerMOT {
+    background-color: rgb(246, 237, 237);
+    padding: 1.25em; /* Utilisation de 'em' pour le padding */
+    border-radius: 0.625em; /* Utilisation de 'em' pour le border-radius */
+    text-align: left;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18.75em; /* Largeur fixe en 'em' */
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.submit, .renitialiser, .back-button {
+    font-size: 0.75em; /* Taille de police en 'em' */
+    background-color: rgb(196, 196, 196);
+    background-image: linear-gradient(to bottom, rgb(180, 180, 180), rgb(220, 220, 220));
+    border-radius: 1.5em; /* Utilisation de 'em' pour le border-radius */
+    padding: 0.625em 1.25em; /* Utilisation de 'em' pour le padding */
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+    border: none;
+}
+
+.submit:hover, .renitialiser:hover, .back-button:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.form-buttons {
+    margin-top: 1.25em; /* Utilisation de 'em' pour l'espacement au-dessus des boutons */
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    font-size: 0.75em; /* Taille de police en 'em' */
+}
+
+.text {
+    color: rgb(93, 93, 93);
+}

@@ -1,0 +1,107 @@
+.formpp-container {
+    background-color:rgb(246, 237, 237); /* Fond semi-transparent pour le formulaire */
+    padding: 20px;
+    
+    border-radius: 10px;
+    text-align: left; /* Aligner le texte à gauche */
+    position: absolute; /* Positionnement absolu */
+    top: 50%; /* Centrer verticalement */
+    left: 50%; /* Centrer horizontalement */
+    transform: translate(-50%, -50%); /* Ajuster pour centrer précisément */
+    width: 300px; /* Largeur fixe pour le formulaire */
+    box-sizing: border-box; /* Inclure le padding dans la largeur totale */
+    width: 450px; 
+    height: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+  
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/  
+.create-button {
+    font-size:smaller;
+    background-color:rgb(196, 196, 196);
+    background-image: linear-gradient(to bottom, rgb(180, 180, 180), rgb(220, 220, 220));
+    border-radius: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+    font-size: larger;
+    border: none;
+    position: absolute;
+    top:78%;
+    left: 50%;
+}
+.create-button:hover{
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+
+.icon-event{
+transition: transform 0.3s, filter 0.3s;
+
+}
+.icon-event:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.login-button{
+    border-radius: 24px;
+    background-color:rgb(196, 196, 196);
+    background-image: linear-gradient(to bottom, rgb(180, 180, 180), rgb(220, 220, 220));
+    margin-top: 10px ;
+    position: absolute;
+    transition: transform 0.3s, filter 0.3s;
+    left: 50%;
+    width: 195px; /* Largeur du bouton */
+    height: 45px;
+    font-size: larger;
+  border: none;
+
+}
+.login-button:hover{
+
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+/**/
+.styled-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(101, 154, 224);
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .styled-input:focus {
+    border-color: rgb(52, 105, 204);
+    box-shadow: 0 0 10px rgba(52, 105, 204, 0.5);
+    outline: none;
+  }
+/**/
+.hovvver{
+    color: cornflowerblue;
+    text-decoration: none;
+    position: relative;
+    
+}
+.hovvver:hover{
+    color: blue;
+    text-decoration: none;
+
+}
+#pp {
+    height: auto;
+    width: 160px;
+    position: absolute; /* Positionnement absolu */
+    right: 28%; /* Marge de 220px par rapport à la droite */
+    top: 2%; /* Marge par rapport au haut */
+  }
+  

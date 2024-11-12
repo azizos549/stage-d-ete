@@ -1,0 +1,93 @@
+<div class="background">
+  <div class="form-container">
+    <a routerLink="/acceuil" title="retour">
+      <button class="back-button">Back</button>
+    </a>
+    <br>
+    <h2><span class="highlight">Forum</span></h2>
+
+    <form (submit)="onSubmitForm()" method="POST">
+      <div class="form-group">
+        <label for="username"> Username :</label>
+        <input type="text" id="username" [(ngModel)]="userName" name="userName" minlength="6" class="styled-input">
+        <div *ngIf="isUserNameNull" class="error-message">
+          This field is required!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password :</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" minlength="6" maxlength="15" class="styled-input">
+        <div *ngIf="isNull" class="error-message">
+          This field is required!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirmpassword">Confirm password :</label>
+        <input type="password" id="confirmpassword" [(ngModel)]="confirmpassword" name="confirmpassword" minlength="6" maxlength="15" class="styled-input">
+        <div *ngIf="isNullC" class="error-message">
+          This field is required!
+        </div>
+      </div>
+      <div *ngIf="isSubmitted" class="error-message">
+        The passwords do not match.
+      </div>
+      <div class="form-group">
+        <label for="email">Email :</label>
+        <input type="email" id="email" placeholder="utilisateur@gmail.com" [(ngModel)]="Email" name="Email" class="styled-input">
+        <div *ngIf="isEmail" class="error-message">
+          This field is required!
+        </div>
+      </div>
+      <div *ngIf="Email && !estValide(Email)" class="error-message">
+        The address must end with  @ gmail.com.
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone # :</label>
+        <input type="tel" id="phone" name="Phone" [(ngModel)]="Phone" placeholder="+216 **-***-***" pattern="\+216 [2-9]{2}-[0-9]{3}-[0-9]{3}" class="styled-input">
+        <div *ngIf="isPhone" class="error-message">
+          This field is required!
+        </div>
+      </div>
+      <div *ngIf="Phone && !estvalidephone(Phone)" class="error-message">
+        The phone number must contain 8 digits.
+      </div>
+      <div class="form-group">
+        <label for="bday">Birthday :</label>
+        <input type="date" id="bday" name="bday" class="styled-input">
+      </div>
+      <div class="form-group">
+        <label>Gendre </label>
+        <label for="MR">MR</label>
+        <input type="radio" id="MR" value="MR" name="title">
+        <label for="MS">MS</label>
+        <input type="radio" id="MS" value="MS" name="title">
+        <label for="PHD">PHD</label>
+        <input type="radio" id="PHD" value="PHD" name="title">
+      </div>
+      <div class="form-group">
+        <label for="payment">Paiment</label>
+        <select id="payment">
+          <option value="euro">Euro</option>
+          <option value="dolare">Dolare</option>
+          <option value="dinare">Dinare</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="subscribe">Subscribe</label>
+        <input type="checkbox" id="checkbox">
+      </div>
+      <div class="form-group">
+        <label for="comments">Comments</label>
+        <textarea id="comments" rows="5" cols="30"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="file">File</label>
+        <input type="file" value="chose file" id="file">
+      </div>
+      <div class="form-buttons">
+        <input type="reset" class="renitialiser" value="Reset">
+        <input type="submit" class="submit" value="Send">
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="containerMOT">
+    <a routerLink="/acceuil" title="retour">
+        <button class="back-button">back</button>
+          </a>
+    <h3>Forgot password?</h3>
+
+    <h4 class="text">Please enter your email address so that we can send you a code to reset your password.
+    </h4>
+   
+    <form (submit)="onSubmitForm()" method="POST">
+
+            <label for="email" class="highlight">Email :</label>
+            <input type="email" id="email" placeholder="utilisateur@gmail.com"  [(ngModel)]="Email"name="Email"class="styled-input">
+            <div *ngIf="isEmail" class="error-message">
+                This field is required!
+              </div>
+             <!--Email doit L'adresse doit se terminer par @gmail.com-->
+          <div *ngIf="!estValide(Email)" class="error-message">
+            The address must end with @gmail.com
+          </div>
+          <!--mail-->
+            <div class="form-buttons">
+                <input type="reset" name="reset" class="renitialiser">
+                <input type="submit" name="submit" class="submit" style="left: 40%; position: relative;">
+            </div>
+    </form>
+</div>
